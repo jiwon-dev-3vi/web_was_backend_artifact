@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f6f8" />
+    <title>Artifact Lab · Web + WAS</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <a class="brand" href="/">Artifact<span>Lab</span></a>
+        <nav aria-label="페이지 이동">
+          <a href="/">연결 확인</a>
+          <a href="/catalog">상품 목록</a>
+        </nav>
+        <span class="environment">WEB + WAS</span>
+      </header>
+      <main>
+        <section class="intro">
+          <p class="eyebrow">BUILD ONCE, SERVE TOGETHER</p>
+          <h1>화면과 API가<br />만나는 곳.</h1>
+          <p class="description">프론트엔드 화면과 백엔드 API가 같은 호스팅에서 연결되는지 확인합니다.</p>
+        </section>
+        <section class="connection" aria-labelledby="connection-heading">
+          <div>
+            <p class="eyebrow">CONNECTION</p>
+            <h2 id="connection-heading">배포 연결 상태</h2>
+          </div>
+          <button id="refresh" type="button">다시 확인</button>
+          <div class="status-grid">
+            <div><span>백엔드 API</span><strong id="api-status">확인 중</strong></div>
+            <div><span>백엔드의 화면 파일</span><strong id="file-status">확인 중</strong></div>
+            <div><span>화면·서버 빌드 일치</span><strong id="build-status">확인 중</strong></div>
+          </div>
+          <p id="message" role="status" aria-live="polite">연결 정보를 불러오고 있습니다.</p>
+        </section>
+        <section class="catalog" aria-labelledby="catalog-heading">
+          <div class="section-heading">
+            <h2 id="catalog-heading">샘플 상품</h2>
+            <p>백엔드 API에서 불러온 데이터</p>
+          </div>
+          <div id="products" class="products"></div>
+        </section>
+        <footer>Artifact Lab <span>Frontend · API · Static assets</span></footer>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

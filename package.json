@@ -1,0 +1,13 @@
+{
+  "name": "web-was-backend-artifact",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "setup": "npm --prefix frontend ci && npm --prefix backend ci",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
+    "dev:web": "npm --prefix frontend run dev",
+    "dev:was": "npm --prefix backend run dev"
+  }
+}
